@@ -1,7 +1,15 @@
 #include <string>
+#include <iostream>
+#include "ScalarConverter.hpp"
 
-int main()
+int main(int ac, char **av)
 {
-	std::string test = "123";
-	int i = static_cast<int>(test);
+	if (ac != 2)
+	{
+		std::cout << "2 args please" << std::endl;
+		return 1;
+	}
+	std::string test = av[1];
+
+	ScalarConverter::convert(test);
 }

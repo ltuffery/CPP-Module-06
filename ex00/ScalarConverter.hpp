@@ -4,20 +4,18 @@ class ScalarConverter
 {
 	
 	public:
+		static void convert(const std::string &str);
+
+	private:
 		ScalarConverter();
 		ScalarConverter(const ScalarConverter &copy);
 		~ScalarConverter();
 
 		ScalarConverter &operator=(const ScalarConverter &copy);
-
-		void convert(const std::string &str);
-
-	private:
-		std::string _str;
-
-		void convert_char();
-		void convert_int();
-		void convert_float();
-		void convert_double();
+	
+		static void _printConvertChar(double n, bool isPossible);
+		static void _printConvertInt(double n, bool isPossible);
+		static void _printConvertFloat(double n, bool isPossible);
+		static void _printConvertDouble(double n, bool isPossible);
 
 };
