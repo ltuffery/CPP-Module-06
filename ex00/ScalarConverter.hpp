@@ -1,3 +1,6 @@
+#ifndef SCALARCONVERTER_HPP
+# define SCALARCONVERTER_HPP
+
 #include <string>
 
 class ScalarConverter
@@ -19,3 +22,5 @@ class ScalarConverter
 		static void _printConvertDouble(double n, bool isPossible);
 
 };
+
+#endif
